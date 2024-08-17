@@ -10,7 +10,6 @@
 
 _✨ 复读6 ✨_
 
-
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/tkgs0/nonebot-plugin-repesix.svg" alt="license">
 </a>
