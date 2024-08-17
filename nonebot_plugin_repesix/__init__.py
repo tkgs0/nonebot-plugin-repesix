@@ -8,7 +8,9 @@ __plugin_meta__ = PluginMetadata(
     name="复读6",
     description="当有人发送 `6` 或 `主|蚌|蜯|草|艹|乐|樂|寄|典|孝|急|麻` 时概率触发复读",
     usage="概率公示: random()*10//1 == 6.0",
-    type="application"
+    type="application",
+    homepage="https://github.com/tkgs0/nonebot-plugin-repesix",
+    supported_adapters=None
 )
 
 
