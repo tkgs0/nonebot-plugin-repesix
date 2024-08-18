@@ -1,5 +1,5 @@
 from random import random
-from nonebot import on_regex
+from nonebot import on_regex, on_fullmatch
 from nonebot.plugin import PluginMetadata
 from nonebot.internal.adapter import Event
 
@@ -22,8 +22,8 @@ async def _(event: Event):
         await six.finish(event.get_message())
 
 
-nonsense = on_regex(
-    r"^(主|蚌|蜯|草|艹|乐|樂|寄|典|孝|急|麻)$",
+nonsense = on_fullmatch(
+    ("主", "蚌", "蜯", "草", "艹", "乐", "樂", "寄", "典", "孝", "急", "麻"),
     priority=5,
     block=False
 )
