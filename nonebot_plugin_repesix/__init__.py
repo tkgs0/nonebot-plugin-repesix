@@ -10,7 +10,10 @@ __plugin_meta__ = PluginMetadata(
     usage="概率公示: random()*10//1 == 6.0",
     type="application",
     homepage="https://github.com/tkgs0/nonebot-plugin-repesix",
-    supported_adapters=None
+    supported_adapters=None,
+    extra={
+        "author": "月ヶ瀬"
+    }
 )
 
 
