@@ -6,7 +6,7 @@ from nonebot.internal.adapter import Event
 
 __plugin_meta__ = PluginMetadata(
     name="复读6",
-    description="当有人发送 `6` 或 `主|蚌|蜯|草|艹|乐|樂|寄|典|孝|急|麻` 时概率触发复读",
+    description="当有人发送 `6` 或 `主|蚌|蜯|草|艹|乐|樂|寄|典|孝|急|麻|悲` 时概率触发复读",
     usage="概率公示: random()*10//1 == 6.0",
     type="application",
     homepage="https://github.com/tkgs0/nonebot-plugin-repesix",
@@ -25,13 +25,13 @@ async def _(event: Event):
         await six.finish(event.get_message())
 
 
-nonsense = on_fullmatch(
-    ("主", "蚌", "蜯", "草", "艹", "乐", "樂", "寄", "典", "孝", "急", "麻"),
+seven = on_fullmatch(
+    ("主", "蚌", "蜯", "草", "艹", "乐", "樂", "寄", "典", "孝", "急", "麻", "悲"),
     priority=5,
     block=False
 )
 
-@nonsense.handle()
+@seven.handle()
 async def _(event: Event):
     if random()*10//1 == 6.0:
-        await nonsense.finish(event.get_message())
+        await seven.finish(event.get_message())
